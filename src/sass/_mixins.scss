@@ -1,0 +1,117 @@
+@mixin navHover {
+    border: 2px solid $darkRed;
+}
+
+@mixin hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@mixin visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin h3FontSize {
+    @media (min-width: 550px) {
+        letter-spacing: 10px;
+    }
+    @media (min-width: 600px) {
+        font-size: 50px;
+    }
+    @media (min-width: 670px) {
+        font-size: 60px;
+    }
+    @media (min-width: 780px) {
+        font-size: 80px;
+    }
+    @media (min-width: $gridBreakPoint) {
+        font-size: 30px;
+    }
+    @media (min-width: 1100px) {
+        font-size: 40px;
+    }
+    @media (min-width: 1300px) {
+        font-size: 50px;
+    }
+    @media (min-width: 1560px) {
+        font-size: 60px;
+    }
+    @media (min-width: 1660px) {
+        font-size: 80px;
+    }
+}
+
+@mixin mediaSliderControls($direction) {
+    @media (min-width: 1280px) {
+        #{$direction}: 60px;
+    }
+    @media (min-width: 1345px) {
+        #{$direction}: 70px;
+    }
+    @media (min-width: 1563px) {
+        #{$direction}: -100px;
+    }
+    @media (min-width: 1600px) {
+        #{$direction}: -130px;
+    }
+    @media (min-width: 1700px) {
+        #{$direction}: -150px;
+    }
+    @media (min-width: 1760px) {
+        #{$direction}: -190px;
+    }
+    @media (min-width: 1800px) {
+        #{$direction}: -205px;
+    }
+}
+
+@mixin mediaSliderControlsHover($direction) {
+    @media (min-width: 1280px) {
+        #{$direction}: 57px;
+    }
+    @media (min-width: 1345px) {
+        #{$direction}: 67px;
+    }
+    @media (min-width: 1563px) {
+        #{$direction}: -103px;
+    }
+    @media (min-width: 1600px) {
+        #{$direction}: -133px;
+    }
+    @media (min-width: 1700px) {
+        #{$direction}: -153px;
+    }
+    @media (min-width: 1760px) {
+        #{$direction}: -193px;
+    }
+    @media (min-width: 1800px) {
+        #{$direction}: -208px;
+    }
+}

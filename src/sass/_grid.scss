@@ -1,0 +1,42 @@
+.container {
+    width: 100%;
+    max-width: $gridContainerWidth;
+    margin: 0 auto;
+
+    .row {
+        @extend %clearfix;
+        [class*='col-'] {
+            width: 100%;
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            @media (min-width: $gridBreakPoint) {
+                width: 100% / $gridColumns;
+            }
+
+        }
+
+        // Tworzenie szerokości kolumn dla tablet / desktop
+        @media (min-width: $gridBreakPoint) {
+            @for $i from 1 through $gridColumns {
+                .col-#{$i} {
+                    width: (100% / $gridColumns) * $i;
+                    float: left;
+                    padding-left: 14px;
+                    padding-right: 14px;
+                }
+            }
+
+            // Tworzenie offsetu kolumn dla tablet / desktop
+            @for $i from 1 through $gridColumns {
+                .col-offset-#{$i} {
+                    margin-left: (100% / $gridColumns) * $i;
+                }
+            }
+
+        }
+
+    }
+
+}
