@@ -4,4 +4,4 @@ Przykładowa strona Hotelu zakodowana z pliku PSD.
 
 Zobacz na żywo [tutaj](https://dabrovsky.github.io/Hotel/)
 
-![layout](img/preview.png)
+![layout](src/img/preview.jpg)
